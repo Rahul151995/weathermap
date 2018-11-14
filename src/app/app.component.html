@@ -1,0 +1,28 @@
+
+
+  <div class="main-container">
+   
+   
+<div class="small-conatiner">
+  <div class="cloud">
+      <img *ngIf="image" alt="light rain"  [src]="image">
+      <div *ngIf="currentWeather" class="mystyle">
+      <p>    humidity:{{currentWeather.main.humidity}}
+         pressure:{{currentWeather.main.pressure}}
+            temp:{{currentWeather.main.temp}}
+                 max:{{currentWeather.main.temp_max}}
+                    min:{{currentWeather.main.temp_min}}</p>
+      </div>
+    </div>
+
+  <div *ngIf="currentWeather.sys.country"> Country:{{currentWeather.sys.country}}</div>
+  <div *ngIf="currentWeather.wind.speed"> Wind speed:{{currentWeather.wind.speed}}</div>
+  <div *ngIf="currentWeather.weather[0].description">Description:{{currentWeather.weather[0].description}}</div>
+  <div *ngIf="currentWeather.visibility"> visibility:{{currentWeather.visibility}}</div>
+
+
+
+</div>
+  </div>
+
+
